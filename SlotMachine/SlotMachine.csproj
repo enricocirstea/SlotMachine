@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80A5DFC4-A29F-4E32-9A58-1E4AFDDF2A89}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SlotMachine</RootNamespace>
+    <AssemblyName>SlotMachine</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Database, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Database\bin\Debug\Database.dll</HintPath>
+    </Reference>
+    <Reference Include="MACEncryptor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MACEncryptor\bin\Debug\MACEncryptor.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.112.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.112.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinningsCalculator">
+      <HintPath>..\WinningsCalculator\bin\Debug\WinningsCalculator.dll</HintPath>
+    </Reference>
+    <Reference Include="XmlReader">
+      <HintPath>..\XmlReader\bin\Debug\XmlReader.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutScreen.Designer.cs">
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddCreditScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCreditScreen.Designer.cs">
+      <DependentUpon>AddCreditScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CurrentPlayer.cs" />
+    <Compile Include="GamblingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamblingScreen.Designer.cs">
+      <DependentUpon>GamblingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JackpotScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JackpotScreen.Designer.cs">
+      <DependentUpon>JackpotScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JackpotWinnersScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JackpotWinnersScreen.Designer.cs">
+      <DependentUpon>JackpotWinnersScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginScreen.Designer.cs">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenuScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenuScreen.Designer.cs">
+      <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paytable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paytable.Designer.cs">
+      <DependentUpon>Paytable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterScreen.Designer.cs">
+      <DependentUpon>RegisterScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SlotMachineScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SlotMachineScreen.Designer.cs">
+      <DependentUpon>SlotMachineScreen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutScreen.resx">
+      <DependentUpon>AboutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddCreditScreen.resx">
+      <DependentUpon>AddCreditScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GamblingScreen.resx">
+      <DependentUpon>GamblingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackpotScreen.resx">
+      <DependentUpon>JackpotScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackpotWinnersScreen.resx">
+      <DependentUpon>JackpotWinnersScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginScreen.resx">
+      <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuScreen.resx">
+      <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paytable.resx">
+      <DependentUpon>Paytable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterScreen.resx">
+      <DependentUpon>RegisterScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlotMachineScreen.resx">
+      <DependentUpon>SlotMachineScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\CasinoShadow.ttf" />
+    <None Include="Resources\OhMightyIsisBold-erX3.otf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background-image.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vegascasino-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SizzlingHotdeluxe_Reels %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sluts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\157773272725733354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_6_5063335759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watermelon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-hand-painted-billboards.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jackpot-PNG-.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="changeBet.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="failGamble.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="gamble.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fiveGamble.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="jackpotSound.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="menu-music.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\jackpotLogo.png" />
+    <Content Include="start.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="winWait.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>
